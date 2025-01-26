@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:9.1.0   # 실제 사용 가능한 이미지 태그로 교체 필요
+    container_name: hardcore_elbakyan
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypass
+    ports:
+      - "3306:3306"
+
+
+  redis:
+    image: redis:7.4.2
+    container_name: crazy_ellis
+    ports:
+      - "6379:6379"
+
